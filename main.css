@@ -1,0 +1,30 @@
+/* RESETS */
+
+html,body,main,header,footer,section,aside,div,nav,a,h1,h2,h3,h4,p,span,figure,button,canvas {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-black);
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  text-decoration: none;
+  border: none;
+  outline: none;
+  background: none;
+  text-transform: none;
+  cursor: pointer;
+}
+
+html,main {
+  height: 100%;
+}
+
+body {
+  height: auto;
+}
