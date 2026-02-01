@@ -28,3 +28,57 @@ html,main {
 body {
   height: auto;
 }
+
+header {
+  width: 100vw;
+  height: 200px;
+  background-color: salmon;
+}
+
+#video-demo-reel {
+  margin: 0 auto;
+}
+
+.page-title-section {
+  width: 100px;
+  height: 125px;
+  display: grid;
+  grid-template-columns: 50px 50px;
+  grid-template-rows: 100%;
+  /* justify-content: flex-start; */
+  /* align-content: flex-start; */
+  /* align-items: start; */
+  background-color: lavender;
+}
+
+.page-number {
+  width: 50px;
+  height: 110px;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  justify-self: flex-start;
+  align-self: flex-start;
+  background-color: green;
+}
+
+.page-number-font {
+  font-family: "Playwrite US Modern", cursive;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 90px;
+}
+
+.page-title {
+  padding-top: 20px;
+}
+
+.page-title-font {
+  font-family: "Open Sans", sans-serif;
+  /* font-optical-sizing: auto; */
+  font-weight: 45;
+  font-style: normal;
+  font-size: 45px;
+  /* font-variation-settings:
+    "wdth" 75; */
+}
