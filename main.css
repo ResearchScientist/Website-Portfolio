@@ -114,3 +114,9 @@ body {
   align-items: center;
   background-color: lavender;
 }
+
+.case-study {
+  width: 100px;
+  height: 50px;
+  border: 1px solid #8c8c8c;
+}
