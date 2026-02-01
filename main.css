@@ -1,6 +1,6 @@
 /* RESETS */
 
-html,body,main,header,footer,section,aside,div,nav,a,h1,h2,h3,h4,p,span,figure,button,canvas {
+html,body,main,header,footer,section,aside,div,nav,a,h1,h2,h3,h4,p,span,ul,li,figure,button,canvas {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -27,38 +27,66 @@ html,main {
 
 body {
   height: auto;
+  padding: 0px 50px;
 }
 
-header {
-  width: 100vw;
-  height: 200px;
-  background-color: salmon;
+.main-header {
+  width: 100%;
+  height: 180px;
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  grid-template-rows: 100%;
+}
+
+.main-navigation {
+  width: 200px;
+  height: 50px;
+  margin-top: 40px;
+  grid-column: 2/-1;
+  grid-row: 1/-1;
+  justify-self: flex-end;
+  background-color: lavender;
+}
+
+.main-navigation ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  font-size: 16px;
 }
 
 #video-demo-reel {
-  margin: 0 auto;
+  width: 50%;
+  margin-left: 50px;
+  /* margin: 0 auto; */
 }
 
 .page-title-section {
   width: 100px;
   height: 125px;
+  grid-column: 1/2;
+  grid-row: 1/-1;
   display: grid;
   grid-template-columns: 50px 50px;
   grid-template-rows: 100%;
-  /* justify-content: flex-start; */
-  /* align-content: flex-start; */
-  /* align-items: start; */
   background-color: lavender;
 }
 
 .page-number {
   width: 50px;
-  height: 110px;
+  height: 100%;
   grid-column: 1/2;
-  grid-row: 1/2;
+  grid-row: 1/-1;
   justify-self: flex-start;
   align-self: flex-start;
-  background-color: green;
+}
+
+.page-title {
+  width: 50px;
+  height: 100%;
+  padding-top: 25px;
+  grid-column: 2/-1;
+  grid-row: 1/-1;
 }
 
 .page-number-font {
@@ -69,10 +97,6 @@ header {
   font-size: 90px;
 }
 
-.page-title {
-  padding-top: 20px;
-}
-
 .page-title-font {
   font-family: "Open Sans", sans-serif;
   /* font-optical-sizing: auto; */
@@ -81,4 +105,12 @@ header {
   font-size: 45px;
   /* font-variation-settings:
     "wdth" 75; */
+}
+
+#demo-reel-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: lavender;
 }

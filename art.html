@@ -7,19 +7,28 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75,300&family=Playwrite+US+Modern:wght@100&display=swap" rel="stylesheet">
+    <script src="main.js"></script>
     <title>Art</title>
 </head>
 <body>
-    <header>
+    <header class="main-header">
         <aside class="page-title-section">
             <div class="page-number page-number-font">1</div>
             <div class="page-title page-title-font">Art</div>
         </aside>
-        <nav></nav>
+        <nav class="main-navigation" aria-label="main navigation">
+            <ul class="page-title-font">
+                <li><a href="/index.html">home</a></li>
+                <li><a href="/projects.html">projects</a></li>
+                <li><a href="/contact.html">contact</a></li>
+            </ul>
+        </nav>
     </header>
-    <h1>1 Art</h1>
     <main>
-        <video id="video-demo-reel" width="50%" controls src="media/vid/demo-reel.mp4" poster="media/img/demo-reel-thumbnail.png" type="video/mp4">Your browser does not support this video format.</video>
+        <section id="demo-reel-section">
+            <video id="video-demo-reel" controls src="media/vid/demo-reel.mp4" poster="media/img/demo-reel-thumbnail.png" type="video/mp4">Your browser does not support this video format.</video>
+            <button>case study</button>
+        </section>
     </main>    
 </body>
 </html>
