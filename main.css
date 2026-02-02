@@ -31,6 +31,18 @@ body {
   background-color: #d6d6e7;
 }
 
+body.dim , body:not(.dim) {
+  transition: background-color .75s ease-in-out;
+}
+
+body.dim {
+  background-color: #141414;
+}
+
+body.dim #demo-reel-section a {
+  border: 1px solid #141414;
+}
+
 .main-header {
   width: 100%;
   height: 180px;
@@ -69,7 +81,6 @@ body {
   display: grid;
   grid-template-columns: 50px 50px;
   grid-template-rows: 100%;
-  /* background-color: lavender; */
 }
 
 .page-number {
@@ -112,7 +123,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* background-color: lavender; */
 }
 
 .case-study {
@@ -123,4 +133,5 @@ body {
   align-items: center;
   font-size: 16px;
   border: 1px solid #8c8c8c;
+  transition: border-color .75s ease-in-out;
 }
