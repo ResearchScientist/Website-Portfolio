@@ -12,15 +12,39 @@ window.onblur = function() {
 
 const demoReelBody = document.getElementById('demo-reel-body');
 const videoDemoReel = document.getElementById('video-demo-reel');
-const bodyClass = demoReelBody.classList;
+let cursorTimer;
 
-const darken = () => bodyClass.add('dim');
-const lighten = () => bodyClass.remove('dim');
+const darken = () => {
+  demoReelBody.classList.add('dim');
+  demoReelBody.classList.add('no-cursor');
+}
+
+const lighten = () => {
+  demoReelBody.classList.remove('dim');
+  demoReelBody.classList.remove('no-cursor');
+}
 
 videoDemoReel.addEventListener('play',darken);
 videoDemoReel.addEventListener('ended',lighten);
 
+const hideCursor = () => {
+  if (demoReelBody && !videoDemoReel.paused) {
+    demoReelBody.classList.add('no-cursor');
+  }
+};
+
+const handleCursorMovement = () => {
+  if (demoReelBody) {
+    demoReelBody.classList.remove('no-cursor');
+    clearTimeout(cursorTimer);
+    if (videoDemoReel && !videoDemoReel.paused) {
+      cursorTimer = setTimeout(hideCursor, 750);
+    }
+  }
+};
+
 if (videoDemoReel) {
+  document.addEventListener('mousemove',handleCursorMovement);
   videoDemoReel.onended = () => {
     videoDemoReel.load();
   };

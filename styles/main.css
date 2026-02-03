@@ -39,6 +39,10 @@ body {
   background-color: #141414;
 }
 
+#demo-reel-body.no-cursor {
+  cursor: none !important;
+}
+
 #demo-reel-body.dim header {
   opacity: 0;
   transition: all .75s ease-in-out;
