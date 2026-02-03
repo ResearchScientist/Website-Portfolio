@@ -39,8 +39,17 @@ body.dim {
   background-color: #141414;
 }
 
+body.dim header {
+  opacity: 0;
+  transition: all .75s ease-in-out;
+  pointer-events: none;
+}
+
 body.dim #demo-reel-section a {
   border: 1px solid #141414;
+  opacity: 0;
+  transition: all .75s ease-in-out;
+  pointer-events: none;
 }
 
 .main-header {

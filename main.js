@@ -18,3 +18,33 @@ const lighten = () => bodyClass.remove('dim');
 
 videoDemoReel.addEventListener('play',darken);
 videoDemoReel.addEventListener('ended',lighten);
+
+if (videoDemoReel) {
+  videoDemoReel.onended = () => {
+    videoDemoReel.load();
+  };
+
+  document.addEventListener('keydown', (e) => {
+    const key = e.key.toLowerCase();
+    switch (key) {
+      case 'escape':
+        e.preventDefault();
+        videoDemoReel.load();
+        lighten();
+        break;
+      case ' ':
+      case 'k':
+        e.preventDefault();
+        videoDemoReel.paused ? videoDemoReel.play() : videoDemoReel.pause();
+        break;
+      case 'arrowright':
+      case 'l':
+        videoDemoReel.currentTime += 10;
+        break;
+      case 'arrowleft':
+      case 'j':
+        videoDemoReel.currentTime -= 10;
+        break;
+    }
+  });
+}
