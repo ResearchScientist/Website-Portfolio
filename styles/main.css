@@ -31,21 +31,25 @@ body {
   background-color: #d6d6e7;
 }
 
-body.dim , body:not(.dim) {
+#demo-reel-body.dim , #demo-reel-body:not(.dim) {
   transition: background-color .75s ease-in-out;
 }
 
-body.dim {
+#demo-reel-body.dim {
   background-color: #141414;
 }
 
-body.dim header {
+#demo-reel-body.no-cursor {
+  cursor: none !important;
+}
+
+#demo-reel-body.dim header {
   opacity: 0;
   transition: all .75s ease-in-out;
   pointer-events: none;
 }
 
-body.dim #demo-reel-section a {
+#demo-reel-body.dim #demo-reel-section a {
   border: 1px solid #141414;
   opacity: 0;
   transition: all .75s ease-in-out;
