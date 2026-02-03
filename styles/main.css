@@ -1,6 +1,6 @@
 /* RESETS */
 
-html,body,main,header,footer,section,aside,div,nav,a,h1,h2,h3,h4,p,span,ul,li,figure,button,canvas {
+html,body,main,header,footer,section,aside,div,nav,a,h1,h2,h3,h4,p,span,ul,li,figure,button,canvas,video {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -19,6 +19,11 @@ button {
   background: none;
   text-transform: none;
   cursor: pointer;
+}
+
+video {
+  border: none;
+  outline: none;
 }
 
 html,main {
@@ -171,7 +176,9 @@ body {
 
 #video-demo-reel {
   width: 50%;
-  padding-bottom: 50px;
+  aspect-ratio: 16/9;
+  margin-bottom: 50px;
+  background-color: transparent !important;
 }
 
 .page-title-section {
