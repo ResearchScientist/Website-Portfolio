@@ -10,8 +10,9 @@ window.onblur = function() {
 
 // VIDEO PLAYER
 
+const demoReelBody = document.getElementById('demo-reel-body');
 const videoDemoReel = document.getElementById('video-demo-reel');
-const bodyClass = document.body.classList;
+const bodyClass = demoReelBody.classList;
 
 const darken = () => bodyClass.add('dim');
 const lighten = () => bodyClass.remove('dim');
