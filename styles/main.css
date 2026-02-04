@@ -51,7 +51,6 @@ body {
   grid-column: 2/-1;
   grid-row: 1/-1;
   justify-self: flex-end;
-  /* background-color: lavender; */
 }
 
 .main-navigation ul {
