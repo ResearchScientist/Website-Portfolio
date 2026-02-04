@@ -72,7 +72,7 @@ main {
   pointer-events: none;
 }
 
-#demo-reel-body.dim #demo-reel-section a {
+#demo-reel-body.dim .case-study {
   border: 1px solid #141414;
   opacity: 0;
   transition: all .75s ease-in-out;
