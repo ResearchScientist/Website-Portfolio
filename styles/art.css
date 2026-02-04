@@ -1,3 +1,11 @@
+.page-title-section .page-number {
+  font-size: clamp(40px, 12.5vw, 90px);
+}
+
+.page-title-section .page-title {
+  font-size: clamp(24px, 6.25vw, 45px);
+}
+
 #demo-reel-body {
   height: 100dvh;
   display: grid;
@@ -69,4 +77,35 @@ main {
   opacity: 0;
   transition: all .75s ease-in-out;
   pointer-events: none;
+}
+
+@media (max-width: 530px) {
+  .main-header {
+    height: auto;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+  }
+  .main-navigation {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    justify-self: center;
+  }
+  .page-title-section {
+    width: 50px;
+    margin-top: 20px;
+    margin-left: -12px;
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    justify-self: center;
+    grid-template-columns: 25px 25px;
+    justify-content: center;
+
+  }
+  .page-number {
+    width: 25px;
+  }
+  .page-title {
+    width: 25px;
+    padding-top: 15px;
+  }
 }
