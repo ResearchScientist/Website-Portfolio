@@ -1,4 +1,12 @@
+#home-body {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: 120px 1fr 1fr;
+}
+
 main {
+  grid-column: 1/-1;
+  grid-row: 2/-1;
   display: grid;
   grid-template-columns: 75% 25%;
   grid-template-rows: 1fr 1fr;
@@ -6,6 +14,8 @@ main {
 
 .main-header {
   height: 120px;
+  grid-column: 1/-1;
+  grid-row: 1/2;
 }
 
 #web-name-section {
@@ -43,7 +53,6 @@ main {
   align-self: flex-end;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
-  /* background-color: teal; */
 }
 
 #toc {
@@ -99,3 +108,13 @@ main {
 #toc div:nth-of-type(2) {grid-row: 3/4;}
 #toc div:nth-of-type(3) {grid-row: 4/5;}
 #toc div:nth-of-type(4) {grid-row: 5/6;}
+
+#line-decoration {
+  width: 20px;
+  height: 20px;
+  grid-column: 1/2;
+  grid-row: -1/-2;
+  align-self: flex-end;
+  border-bottom: 1px solid #8c8c8c;
+  border-left: 1px solid #8c8c8c;
+}
