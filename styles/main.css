@@ -32,7 +32,7 @@ html,main {
 
 body {
   height: auto;
-  padding: 0px 50px;
+  padding: 50px 50px;
   background-color: #d6d6e7;
 }
 
@@ -47,7 +47,6 @@ body {
 .main-navigation {
   width: 200px;
   height: 25px;
-  margin-top: 40px;
   grid-column: 2/-1;
   grid-row: 1/-1;
   justify-self: flex-end;
@@ -63,6 +62,7 @@ body {
 .page-title-section {
   width: 100px;
   height: 125px;
+  margin-top: -40px;
   grid-column: 1/2;
   grid-row: 1/-1;
   display: grid;
