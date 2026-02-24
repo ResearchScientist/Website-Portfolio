@@ -26,6 +26,15 @@ video {
   outline: none;
 }
 
+/* CUSTOM PROPERTIES */
+
+:root {
+  --colour-background: #d6d6e7;
+  --colour-accent: #4696b4;
+  --colour-accent-dark: #3686b4;
+}
+
+
 html,main {
   height: 100%;
 }
@@ -33,7 +42,7 @@ html,main {
 body {
   height: auto;
   padding: 50px 50px;
-  background-color: #d6d6e7;
+  background-color: var(--colour-background);
 }
 
 .main-header {
@@ -50,6 +59,7 @@ body {
   grid-column: 2/-1;
   grid-row: 1/-1;
   justify-self: flex-end;
+  color: var(--colour-accent-dark);
 }
 
 .main-navigation ul {
