@@ -28,6 +28,7 @@ main {
 
 #web-name {
   grid-row: 1/2;
+  font-variation-settings: 'wdth' 75;
 }
 
 #web-sub-name {
