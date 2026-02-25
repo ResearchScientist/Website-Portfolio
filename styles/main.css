@@ -121,6 +121,7 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 16px;
+  color: var(--colour-accent-dark);
   border: 1px solid #8c8c8c;
   transition: border-color .75s ease-in-out;
 }
