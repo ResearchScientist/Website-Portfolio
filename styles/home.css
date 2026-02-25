@@ -28,12 +28,19 @@ main {
 
 #web-name {
   grid-row: 1/2;
+  font-variation-settings: 'wdth' 75;
 }
 
 #web-sub-name {
-  margin-top: -20px;
+  width: max-content;
+  margin-right: -3px;
   grid-row: 2/-1;
+  justify-self: flex-end;
+  align-self: flex-start;
   text-align: right;
+  display: inline-flex;
+  line-height: .8;
+  overflow: hidden;
   color: var(--colour-accent);
 }
 
@@ -137,7 +144,7 @@ main {
     font-size: 60px;
   }
   #web-sub-name {
-    margin-top: -60px;
+    margin-top: -50px;
     font-size: 60px;
   }
   #bio-summary {
