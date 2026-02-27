@@ -2,11 +2,13 @@
 
 const demoReelBody = document.getElementById('demo-reel-body');
 const videoDemoReel = document.getElementById('video-demo-reel');
+const videoKeys = document.getElementById('video-keys');
 let cursorTimer;
 
 const darken = () => {
   demoReelBody.classList.add('dim');
   demoReelBody.classList.add('no-cursor');
+  videoKeys.style.opacity = 0;
 }
 
 const lighten = () => {
