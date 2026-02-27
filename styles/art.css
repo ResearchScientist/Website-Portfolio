@@ -33,13 +33,10 @@ main {
   height: 100%;
   max-height: 100%;
   aspect-ratio: 16/9;
-  /* display: flex; */
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 100%;
-  /* flex-direction: column; */
   align-items: center;
-  /* justify-content: center; */
   justify-items: center;
 }
 
@@ -53,29 +50,32 @@ main {
 }
 
 #video-keys {
-  margin-top: 5px;
+  margin-top: 10px;
   grid-column: 1/-1;
   grid-row: 1/-1;
-  /* max-width: 100%;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
   max-height: 100%;
-  aspect-ratio: 16/9; */
-  align-self: flex-start;
+  aspect-ratio: 16/9;
   color: rgb(200,200,200);
   font-size: 12px;
+  text-align: center;
   pointer-events: none;
+  transition: opacity .5s;
 }
 
 #video-keys span:nth-of-type(2) {
-  margin: 0 calc(100dvw * .6px);
+  margin: 0 8px;
 }
 
 kbd {
   padding: 2px 4px;
   display: inline-block;
   line-height: 1;
-  border-radius: 5px;
-  border: 1px solid rgb(100,100,100);
-  background-color: rgb(50,50,50);
+  border-radius: 4px;
+  border: 1px solid rgb(80,80,80);
+  background-color: rgb(40,40,40);
 }
 
 .case-study {
@@ -139,5 +139,8 @@ kbd {
   .page-title {
     width: 25px;
     padding-top: 15px;
+  }
+  #video-keys {
+    font-size: 9px;
   }
 }
