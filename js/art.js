@@ -3,6 +3,8 @@
 const demoReelBody = document.getElementById('demo-reel-body');
 const videoDemoReel = document.getElementById('video-demo-reel');
 const videoKeys = document.getElementById('video-keys');
+const arrowsForward = document.getElementById('arrows-forward');
+const arrowsBackward = document.getElementById('arrows-backward');
 let cursorTimer;
 
 const darken = () => {
@@ -57,10 +59,18 @@ if (videoDemoReel) {
       case 'arrowright':
       case 'l':
         videoDemoReel.currentTime += 10;
+        arrowsForward.style.opacity = 1;
+        setTimeout(() => {
+          arrowsForward.style.opacity = 0;
+        },400);
         break;
       case 'arrowleft':
       case 'j':
         videoDemoReel.currentTime -= 10;
+        arrowsBackward.style.opacity = 1;
+        setTimeout(() => {
+          arrowsBackward.style.opacity = 0;
+        },400);
         break;
     }
   });
