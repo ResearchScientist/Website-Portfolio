@@ -3,6 +3,7 @@
 const demoReelBody = document.getElementById('demo-reel-body');
 const videoDemoReel = document.getElementById('video-demo-reel');
 const videoKeys = document.getElementById('video-keys');
+const arrowsForward = document.getElementById('arrows-forward');
 let cursorTimer;
 
 const darken = () => {
@@ -57,6 +58,10 @@ if (videoDemoReel) {
       case 'arrowright':
       case 'l':
         videoDemoReel.currentTime += 10;
+        arrowsForward.style.opacity = 1;
+        setTimeout(() => {
+          arrowsForward.style.opacity = 0;
+        },500);
         break;
       case 'arrowleft':
       case 'j':

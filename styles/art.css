@@ -78,6 +78,38 @@ kbd {
   background-color: rgb(40,40,40);
 }
 
+#arrows-forward {
+  width: 40px;
+  margin-left: 200px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 100%;
+  grid-template-rows: 100%;
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  color: var(--colour-accent-dark);
+  opacity: 0;
+  transition: opacity .2s;
+  pointer-events: none;
+}
+
+#arrows-forward span {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  margin-top: -1px;
+  margin-left: -25px;
+}
+
+#arrows-forward img {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  transform: scale(.3);
+}
+
+#arrows-forward img:nth-of-type(2) {
+  margin-left: 6px;
+}
+
 .case-study {
   margin: 25px 0;
   grid-column: 1/-1;
