@@ -20,11 +20,19 @@ function toggleSubMenu(e) {
   const subMenuClicked = projectsSubMenu.contains(e.target);
   if (projectsButtonClicked) {
     projectsSubMenu.classList.toggle('show-sub-menu');
+    if (projectsSubMenu.classList.contains('show-sub-menu')) {
+      projectsMenuButton.setAttribute('aria-expanded','true');
+    }
+    else {
+      projectsMenuButton.setAttribute('aria-expanded','false');
+    }
   }
   else if (!subMenuClicked) {
     projectsSubMenu.classList.remove('show-sub-menu');
+    projectsMenuButton.setAttribute('aria-expanded','false');
   }
   if (subMenuClicked && e.target.tagName === 'A') {
     projectsSubMenu.classList.remove('show-sub-menu');
+    projectsMenuButton.setAttribute('aria-expanded','false');
   }
 }
