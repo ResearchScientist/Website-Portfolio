@@ -44,6 +44,8 @@ body {
   background-color: var(--colour-background);
 }
 
+/* MAIN NAVIGATION */
+
 .main-header {
   width: 100%;
   height: 25px;
@@ -80,12 +82,24 @@ body {
   display: none;
   opacity: 0;
   transition: opacity .2s;
+  position: relative;
 }
 
 #projects-sub-menu.show-sub-menu {
   display: block;
   opacity: 1;
 }
+
+#project-preview {
+  width: 111px;
+  height: 75px;
+  position: absolute;
+  margin-top: 7px;
+  margin-left: -116px;
+  background: teal;
+}
+
+/* TITLE */
 
 .page-title-section {
   width: 100px;
