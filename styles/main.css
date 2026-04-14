@@ -91,7 +91,7 @@ body {
 }
 
 #project-preview {
-  width: 111px;
+  width: 116px;
   height: 74px;
   position: absolute;
   margin-top: 8px;
@@ -109,19 +109,6 @@ body {
   opacity: 1;
   pointer-events: auto;
 }
-
-/* #project-preview-link {
-  width: 116px;
-  height: 74px;
-  position: absolute;
-  margin-top: 8px;
-  margin-left: -121px;
-  padding-right: 5px;
-  background-color: var(--colour-background);
-  background-color: teal;
-  z-index: 2;
-  box-sizing: content-box;
-} */
 
 /* TITLE */
 
