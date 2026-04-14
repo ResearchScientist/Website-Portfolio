@@ -50,8 +50,6 @@ function showThumbnail(e) {
     projectPreview.style.backgroundImage = `url(${imgURL})`;
     projectPreviewLink.setAttribute('href',projURL);
     projectPreview.classList.add('visible');
-    console.log(target);
-    
   }
 }
 

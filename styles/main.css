@@ -150,12 +150,8 @@ body {
 
 .page-title-font {
   font-family: "Open Sans", sans-serif;
-  /* font-optical-sizing: auto; */
-  /* font-weight: 45; */
   font-style: normal;
   font-size: 45px;
-  /* font-variation-settings:
-    "wdth" 75; */
 }
 
 .case-study {
