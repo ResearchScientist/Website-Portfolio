@@ -8,25 +8,35 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75,300&family=Playwrite+US+Modern:wght@100&display=swap" rel="stylesheet">
+  <script src="js/main.js" defer></script>
   <title>Contact</title>
 </head>
 <body>
   <script>0</script>
   <header class="main-header">
-        <aside class="page-title-section">
-            <!-- <div class="page-number page-number-font">1</div> -->
-            <div class="page-title page-title-font">contact</div>
-        </aside>
-        <nav class="main-navigation" aria-label="main navigation">
-            <ul class="page-title-font">
-                <li><a href="index.html">home</a></li>
-                <li><a href="projects/index.html">projects</a></li>
-                <li><a href="contact.html">contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
+    <aside class="page-title-section">
+      <!-- <div class="page-number page-number-font">1</div> -->
+      <div class="page-title page-title-font">contact</div>
+    </aside>
+    <nav class="main-navigation" aria-label="main navigation">
+      <ul class="page-title-font">
+        <li><a href="index.html">home</a></li>
+        <li>
+          <button id="projects-menu-button" type="button" aria-haspopup="true" aria-expanded="false">projects</button>
+          <ul id="projects-sub-menu" role="menu">
+            <a href="#" id="project-preview-link" aria-hidden="true"><div id="project-preview"></div></a>
+            <li><a href="projects/art.html" data-thumb="media/svg/thumbnail-demo-reel.svg">art</a></li>
+            <li><a href="projects/data.html" data-thumb="media/img/thumbnail-data.png">data</a></li>
+            <li><a href="projects/systems.html" data-thumb="media/img/thumbnail-systems.png">systems</a></li>
+            <li><a href="projects/engineering.html" data-thumb="media/img/thumbnail-engineering.png">engineering</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
 
-    </main>
+  </main>
 </body>
 </html>
