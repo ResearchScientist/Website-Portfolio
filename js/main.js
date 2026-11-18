@@ -15,11 +15,27 @@ const projectsSubMenu = document.getElementById('projects-sub-menu');
 const projectPreviewLink = document.getElementById('project-preview-link');
 const projectPreview = document.getElementById('project-preview');
 
+projectsMenuButton.addEventListener('mouseenter',prefetchSubMenuThumbs);
+projectsMenuButton.addEventListener('focusin',prefetchSubMenuThumbs);
 document.addEventListener('click',toggleSubMenu);
 projectsSubMenu.addEventListener('mouseover',showThumbnail);
 projectsSubMenu.addEventListener('mouseleave',hideThumbnail);
 projectsSubMenu.addEventListener('focusin',showThumbnail);
 projectsSubMenu.addEventListener('focusout',hideThumbnail);
+
+let subMenuThumbsPreFetched = false;
+
+function prefetchSubMenuThumbs() {
+  if (subMenuThumbsPreFetched) {
+    return;
+  }
+  subMenuThumbsPreFetched = true;
+  const thumbLinks = projectsSubMenu.querySelectorAll('a[data-thumb]');
+  thumbLinks.forEach((link) => {
+    const img = new Image();
+    img.src = link.getAttribute('data-thumb');
+  });
+}
 
 function toggleSubMenu(e) {
   const projectsButtonClicked = projectsMenuButton.contains(e.target);
