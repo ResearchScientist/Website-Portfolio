@@ -15,7 +15,6 @@ a {
 button {
   text-decoration: none;
   border: none;
-  /* outline: none; */
   background: none;
   text-transform: none;
   cursor: pointer;
@@ -42,6 +41,7 @@ video {
   --colour-background: #d6d6e7;
   --colour-accent: #4696b4;
   --colour-accent-dark: #3686b4;
+  --text-black: #141414;
 }
 
 html,main {
@@ -78,6 +78,10 @@ body {
   justify-content: space-between;
   list-style: none;
   font-size: 16px;
+}
+
+.main-navigation a {
+  color: var(--colour-accent-dark);
 }
 
 #projects-menu-button {
