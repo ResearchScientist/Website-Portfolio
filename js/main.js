@@ -10,6 +10,7 @@ window.onblur = function() {
 
 // MAIN NAV SUB MENU
 
+const projectsLI = document.getElementById('projects-li');
 const projectsMenuButton = document.getElementById('projects-menu-button');
 const projectsSubMenu = document.getElementById('projects-sub-menu');
 const projectPreviewLink = document.getElementById('project-preview-link');
@@ -24,6 +25,7 @@ projectsSubMenu.addEventListener('mouseover',showThumbnail);
 projectsSubMenu.addEventListener('mouseleave',hideThumbnail);
 projectsSubMenu.addEventListener('focusin',showThumbnail);
 projectsSubMenu.addEventListener('focusout',hideThumbnail);
+projectsLI.addEventListener('focusout',closeSubMenuOnFocusOut);
 
 function prefetchSubMenuThumbs() {
   if (subMenuThumbsPreFetched) {
@@ -71,4 +73,12 @@ function hideThumbnail(e) {
     return;
   }
   projectPreview.classList.remove('visible');
+}
+
+function closeSubMenuOnFocusOut(e) {
+  if (!projectsLI.contains(e.relatedTarget)) {
+    projectsSubMenu.classList.remove('show-sub-menu');
+    projectsMenuButton.setAttribute('aria-expanded',false);
+    hideThumbnail();
+  }
 }
