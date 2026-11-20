@@ -26,6 +26,7 @@ projectsSubMenu.addEventListener('mouseleave',hideThumbnail);
 projectsSubMenu.addEventListener('focusin',showThumbnail);
 projectsSubMenu.addEventListener('focusout',hideThumbnail);
 projectsLI.addEventListener('focusout',closeSubMenuOnFocusOut);
+projectsLI.addEventListener('keydown',closeSubMenuWithESC);
 
 function prefetchSubMenuThumbs() {
   if (subMenuThumbsPreFetched) {
@@ -50,9 +51,7 @@ function toggleSubMenu(e) {
     }
   }
   else if (!subMenuClicked || e.target.closest('a')) {
-    projectsSubMenu.classList.remove('show-sub-menu');
-    projectsMenuButton.setAttribute('aria-expanded','false');
-    hideThumbnail();
+    closeSubMenu();
   }
 }
 
@@ -77,8 +76,19 @@ function hideThumbnail(e) {
 
 function closeSubMenuOnFocusOut(e) {
   if (!projectsLI.contains(e.relatedTarget)) {
-    projectsSubMenu.classList.remove('show-sub-menu');
-    projectsMenuButton.setAttribute('aria-expanded',false);
-    hideThumbnail();
+    closeSubMenu();
   }
+}
+
+function closeSubMenuWithESC(e) {
+  if (e.key === 'Escape' && projectsSubMenu.classList.contains('show-sub-menu')) {
+    closeSubMenu();
+    projectsMenuButton.focus();
+  }
+}
+
+function closeSubMenu() {
+  projectsSubMenu.classList.remove('show-sub-menu');
+  projectsMenuButton.setAttribute('aria-expanded','false');
+  hideThumbnail();
 }
